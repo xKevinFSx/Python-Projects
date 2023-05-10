@@ -1,39 +1,40 @@
 import random
 
-def jogar():
+while True:
 
-    jogar_dnv = 'S'
+    jogador = input('\nDigite uma opção:\n \nP para pedra \nA para papel \nT para tesoura\n')
+    computador = random.choice(['P', 'A', 'T'])
 
-    while jogar_dnv != 'N':
+    print(computador)
 
-        jogador = input('Digite uma opção\n \nP para pedra \nA para papel \nT para tesoura\n')
-        computador = random.choice(['P', 'A', 'T'])
+    #P < A, P > T, A < T
 
-        print(computador)
+    if jogador == computador:
+        print('\nEmpate!\n')
 
-        # P < A, P > T, A < T
+    if jogador == 'P' and computador == 'A':
+        print('\nComputador venceu!\n') 
 
-        if jogador == computador:
-            print('\nEmpate!\n')
+    if jogador == 'P' and computador == 'T':
+        print('\nVocê venceu!\n') 
 
-        if jogador == 'P' and computador == 'A':
-            print('\nComputador venceu!\n') 
-
-        if jogador == 'P' and computador == 'T':
-            print('\nVocê venceu!\n') 
-
-        if jogador == 'A' and computador == 'T':
-            print('\nComputador venceu!\n') 
+    if jogador == 'A' and computador == 'T':
+        print('\nComputador venceu!\n') 
+                
+    if computador == 'P' and jogador == 'A':
+        print('\nVocê venceu!\n')
+                
+    if computador == 'P' and jogador == 'T':
+        print('\nComputador venceu!\n')
+                
+    if computador == 'A' and jogador == 'T':
+        print('\nVocê venceu!\n')
             
-        if computador == 'P' and jogador == 'A':
-            print('\nVocê venceu!\n')
-            
-        if computador == 'P' and jogador == 'T':
-            print('\nComputador venceu!\n')
-            
-        if computador == 'A' and jogador == 'T':
-            print('\nVocê venceu!\n')
-            
-        jogar_dnv = input("Deseja jogar novamente?\nS para SIM\nN para NÃO\n")
+    print('Deseja jogar novamente? (S/N)')
     
-print(jogar())
+    resp = input()
+    if resp == 'N':
+        break
+    
+    
+    
