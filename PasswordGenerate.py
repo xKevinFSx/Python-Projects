@@ -13,7 +13,7 @@ caractes_especiais = string.punctuation
 #concatenar string
 alfabeto = letras + digitos + caractes_especiais
 
-numero = input('Insita a quantidade de senhas a serem geradas: ')
+numero = input('Insira a quantidade de senhas a serem geradas: ')
 numero = int(numero)
 
 tamanho = input("Insira o tamanho que a(s) senha(s) devem ter: ")
