@@ -1,3 +1,0 @@
-# .gitignore
-
-api_key = 'e1889c6909b03b9d85f3e7fabd51f343'
