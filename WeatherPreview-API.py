@@ -1,7 +1,7 @@
 import requests
 import json
 import datetime
-import configWeather
+import config
 from geopy.geocoders import Nominatim
 
 #Pegar localização(lat, lon) de endereço simples ou completo
@@ -11,7 +11,7 @@ localizacao = geolocalizacao.geocode(input())
 #print(localizacao.latitude, localizacao.longitude)
 
 #inserir os dados para acessar as infos da API
-api_key = configWeather.api_key
+api_key = config.api_key
 lat = localizacao.latitude
 lon = localizacao.longitude
 lang = 'pt_br'
