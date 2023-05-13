@@ -8,8 +8,7 @@ from geopy.geocoders import Nominatim
 geolocalizacao = Nominatim(user_agent='WeatherPreview')
 print('Digite uma localização:')
 localizacao = geolocalizacao.geocode(input())
-
-print(localizacao.latitude, localizacao.longitude)
+#print(localizacao.latitude, localizacao.longitude)
 
 #inserir os dados para acessar as infos da API
 api_key = configWeather.api_key
