@@ -9,7 +9,6 @@ geolocalizacao = Nominatim(user_agent='WeatherPreview')
 print('Digite uma localização:')
 localizacao = geolocalizacao.geocode(input())
 
-#print(localizacao.address)
 print(localizacao.latitude, localizacao.longitude)
 
 #inserir os dados para acessar as infos da API
@@ -19,7 +18,7 @@ lon = localizacao.longitude
 lang = 'pt_br'
 url = 'https://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&appid=%s&units=metric&lang=%s' % (lat, lon, api_key, lang)
 
-#chamar a API com os dados passados 
+#chamar a API com os dados passados
 reponse = requests.get(url)
 
 #carregar os dados para variavel
